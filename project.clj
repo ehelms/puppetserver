@@ -1,4 +1,4 @@
-(def ps-version "7.17.4-SNAPSHOT")
+(def ps-version "7.17.3-SNAPSHOT-1")
 
 (defn deploy-info
   [url]
@@ -56,7 +56,7 @@
                  [puppetlabs/jruby-utils]
                  [puppetlabs/clj-shell-utils]
                  [puppetlabs/trapperkeeper]
-                 [puppetlabs/trapperkeeper-webserver-jetty9]
+                 [org.clojars.ehelms/trapperkeeper-webserver-jetty9 "4.5.3-SNAPSHOT"]
                  [puppetlabs/trapperkeeper-authorization]
                  [puppetlabs/trapperkeeper-comidi-metrics]
                  [puppetlabs/trapperkeeper-metrics]
@@ -118,7 +118,7 @@
 
   :profiles {:defaults {:source-paths  ["dev"]
                         :dependencies  [[org.clojure/tools.namespace]
-                                        [puppetlabs/trapperkeeper-webserver-jetty9 :classifier "test"]
+                                        [org.clojars.ehelms/trapperkeeper-webserver-jetty9 "4.5.3-SNAPSHOT" :classifier "test"]
                                         [puppetlabs/trapperkeeper nil :classifier "test" :scope "test"]
                                         [puppetlabs/trapperkeeper-metrics :classifier "test" :scope "test"]
                                         [puppetlabs/kitchensink nil :classifier "test" :scope "test"]
@@ -171,11 +171,11 @@
                                                [org.bouncycastle/bcpkix-jdk18on]
                                                [puppetlabs/jruby-utils]
                                                [puppetlabs/puppetserver ~ps-version]
-                                               [puppetlabs/trapperkeeper-webserver-jetty9]]
+                                               [org.clojars.ehelms/trapperkeeper-webserver-jetty9 "4.5.3-SNAPSHOT"]]
                       :plugins [[puppetlabs/lein-ezbake "2.6.2"]]
                       :name "puppetserver"}
              :uberjar {:dependencies [[org.bouncycastle/bcpkix-jdk18on]
-                                      [puppetlabs/trapperkeeper-webserver-jetty9]]
+                                      [org.clojars.ehelms/trapperkeeper-webserver-jetty9 "4.5.3-SNAPSHOT"]]
                        :aot [puppetlabs.trapperkeeper.main
                              puppetlabs.trapperkeeper.services.status.status-service
                              puppetlabs.trapperkeeper.services.metrics.metrics-service
