@@ -81,9 +81,6 @@
   :test-paths ["test/unit" "test/integration"]
   :resource-paths ["resources" "src/ruby"]
 
-  :repositories [["releases" "https://artifactory.delivery.puppetlabs.net/artifactory/clojure-releases__local/"]
-                 ["snapshots" "https://artifactory.delivery.puppetlabs.net/artifactory/clojure-snapshots__local/"]]
-
   :plugins [[lein-parent "0.3.7"]
             [jonase/eastwood "1.2.2" :exclusions [org.clojure/clojure]]
             ;; We have to have this, and it needs to agree with clj-parent
