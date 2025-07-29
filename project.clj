@@ -106,9 +106,6 @@
                 :config-dir "ezbake/config"
                 :system-config-dir "ezbake/system-config"}
 
-  :deploy-repositories [["releases" ~(deploy-info "https://artifactory.delivery.puppetlabs.net/artifactory/clojure-releases__local/")]
-                        ["snapshots" ~(deploy-info "https://artifactory.delivery.puppetlabs.net/artifactory/clojure-snapshots__local/")]]
-
   ;; By declaring a classifier here and a corresponding profile below we'll get an additional jar
   ;; during `lein jar` that has all the code in the test/ directory. Downstream projects can then
   ;; depend on this test jar using a :classifier in their :dependencies to reuse the test utility
